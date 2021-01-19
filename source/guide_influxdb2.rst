@@ -112,9 +112,9 @@ check your configuration.
 Initial Setup
 =============
 
-Point your browser to URL and create a user account.
+--Point your browser to URL and create a user account.--
 
-To set up initial stuff:
+TODO: setup initial stuff via CLI before exposing via web-backend:
 
 `influx setup`
 
@@ -129,12 +129,15 @@ To set up initial stuff:
 Outside Access
 ==============
 
-Make it accessible:
+TODO: Make it accessible:
 
-`uberspace web backend set --http --port 8086 influx.brutus.link`
+`uberspace web backend set --http --port 8086 influx.your.tld`
 
 Best practices
 ==============
+
+Schema
+------
 
 When designing your schema, think about when to use fields and when to use tags
 for your data:
@@ -148,6 +151,11 @@ fields. So you might want to store commonly queried metadata in tags.*
 
 You should also think about your `series cardinality`_.
 
+Downsampling
+------------
+
+TODO: maybe at an example task, to show retention and downsampling?
+
 Security
 --------
 
@@ -156,12 +164,7 @@ Change all default passwords. Look at folder permissions. Don't get hacked!
 Tuning
 ------
 
-Disable all plugins you don't need. Configure caching.
-
-## Autocompletion
-
-`source <(influx completion bash)`
-`source <(influx completion zsh)`
+TODO: maybe add some memory, cache and query settings?
 
 Updates
 =======
